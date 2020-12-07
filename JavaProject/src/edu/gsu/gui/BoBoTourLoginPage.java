@@ -75,12 +75,12 @@ public class BoBoTourLoginPage extends Application {
 		
 		System.out.println("Customer:" + loginID + " " + password);
 		
-		boolean correct = 
+		boolean correct = LoginCheckUP.check(c1);
 		
 		
 		
 	}
-	
+	;
 
 
 }
