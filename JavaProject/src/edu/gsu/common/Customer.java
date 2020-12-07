@@ -1,6 +1,7 @@
 package edu.gsu.common;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Customer {
 	
@@ -29,9 +30,11 @@ public class Customer {
 		
 	}
 	
-	public void setRoyaltyNumber(int royaltyNumber) {
+	public void setRoyaltyNumber() {
 		
-		this.royaltyNumber = royaltyNumber;
+		Random rand = new Random();
+		
+		royaltyNumber = rand.nextLong(10000);
 		
 	}
 	

@@ -10,7 +10,7 @@ import edu.gsu.common.Customer;
 import edu.gsu.common.Flight;
 import edu.gsu.exceptions.LoginException;
 
-public class DBQuery{
+public class DBQuery {
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -89,5 +89,55 @@ public class DBQuery{
 		
 	}
 	
-	
+	public static void register(Customer c1) throws Exception {
+		
+		Connection conn = null;
+			
+		try {
+			
+			String driver = "com.mysql.cj.jdbc.Driver";
+			String url = "jdbc:mysql://127.0.0.1:3306/?user=root?iseTimezone=true&serverTimezone=UTC";
+			String username = "root";
+			String password = "Xkwhdkf1@";
+			Class.forName(driver);
+			
+			conn = DriverManager.getConnection(url,username,password);	
+			System.out.println("Connected");
+				// Create a statement
+			PreparedStatement ptmt = conn.prepareStatement(Query.REGISTER);
+			
+			ptmt.setString(1, c1.getRoyaltyNumber());
+			ptmt.setString(2, c1.getFirstName());
+			ptmt.setString(3, c1.LastName());
+			ptmt.setString(4, c1.getLoginID());
+			ptmt.setString(5, c1.getPassword());
+			ptmt.setString(6, c1.getEmail());
+			ptmt.setString(7, c1.getAddress());
+			ptmt.setString(8, c1.getZip());
+			ptmt.setString(9, c1.getState());
+			ptmt.setString(10, c1.getSSN());
+			ptmt.setString(11, c1.getAction());
+			
+			ResultSet rs2 = ptmt.executeQuery();
+			
+			int count = 0;
+
+			// Iterate through the result and print the student names
+			while (rs2.next()) {
+				count = rs2.getInt(1);
+			}
+			
+			if (count != 0)
+				throw new LoginException("ID unavailable.");
+			
+		} catch (SQLException e) {
+			
+			System.out.println(e);
+			throw e;
+		}
+		finally {
+			
+			conn.close();
+		}
+	}
 }

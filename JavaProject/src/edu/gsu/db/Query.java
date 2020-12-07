@@ -6,5 +6,20 @@ public class Query {
 			"SELECT count(*) as num  "
 			+ "FROM login_credentials "
 			+ "WHERE username = ? AND password =?";
+	
+	public static final String REGISTER =
+			"INSERT INTO login_credentials VALUES "
+			+ "(\'?\', \'?\', \'?\', \'?\', \'?\', \'?\', \'?\', \'?\', \'?\', \'?\')";
+			/* royaltyNumber
+			 * firstName
+			 * lastName
+			 * loginID
+			 * password
+			 * email
+			 * address
+			 * zip
+			 * state
+			 * ssn
+			 */
 
 }
