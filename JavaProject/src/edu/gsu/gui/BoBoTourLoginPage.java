@@ -2,6 +2,7 @@ package edu.gsu.gui;
 
 import edu.gsu.common.Action;
 import edu.gsu.common.Customer;
+import edu.gsu.exceptions.LoginException;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -77,10 +78,34 @@ public class BoBoTourLoginPage extends Application {
 		
 		boolean correct = LoginCheckUP.check(c1);
 		
-		
+		if (correct) {
+			
+			System.out.println("Welcome back");
+			
+			c1.setAction(Action.GET_FLIGHTS);
+			
+			correct = LoginCheckUP.check(c1);
+			
+			if (correct) {
+				
+				Stage window = (Stage) loginButton.getScene().getWindow();
+				
+				window.close();
+				
+				AccountPage app = new AccountPage(c1);
+				
+				try {
+					
+					app.
+					
+				}
+				
+			}
+			
+		}
 		
 	}
-	;
-
+	
+	
 
 }
