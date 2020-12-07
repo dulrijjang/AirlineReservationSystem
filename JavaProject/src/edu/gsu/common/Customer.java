@@ -10,6 +10,10 @@ public class Customer {
 	private String loginID;
 	private String password;
 	private String email;
+	private String address;
+	private String zip;
+	private String state;
+	private String ssn;
 	private ArrayList<Flight> flights;
 	private String action;
 	
@@ -88,6 +92,39 @@ public class Customer {
 		
 		this.email = email;
 		
+	}
+	
+	public String getAddress() {
+
+		return address;
+
+	}
+	public void setAddress(String address) {
+
+		this.address = address;
+
+	}
+
+	public String getZip() {
+
+		return zip;
+
+	}
+	
+	public void setZip(String zip) {
+
+		this.zip = zip;
+
+	}
+
+	public String getState() {
+
+		return state;
+
+	}
+	public void setState(String state) {
+
+		this.state = state;
 	}
 	
 	 public ArrayList<Flight> getFlights() {
