@@ -1,5 +1,6 @@
 package edu.gsu.gui;
 
+import edu.gsu.common.Action;
 import edu.gsu.common.Customer;
 import javafx.application.Application;
 import javafx.geometry.HPos;
@@ -70,8 +71,11 @@ public class BoBoTourLoginPage extends Application {
 		
 		c1.setLoginID(loginID);
 		c1.setPassword(password);
+		c1.setAction(Action.LOGIN);
 		
+		System.out.println("Customer:" + loginID + " " + password);
 		
+		boolean correct = 
 		
 		
 		
