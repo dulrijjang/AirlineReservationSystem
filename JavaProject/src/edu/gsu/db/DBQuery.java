@@ -39,8 +39,9 @@ public class DBQuery{
 				    
 			ptmt.setString(1, c1.getLoginID());
 			ptmt.setString(2, c1.getPassword());
-				    
+			
 			// Execute a statement
+			
 			ResultSet rs1 = ptmt.executeQuery();
 			
 			int count = 0;
