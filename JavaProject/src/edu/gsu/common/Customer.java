@@ -34,7 +34,7 @@ public class Customer {
 		
 		Random rand = new Random();
 		
-		royaltyNumber = rand.nextLong(10000);
+		royaltyNumber = rand.nextInt(10000);
 		
 	}
 	
@@ -96,7 +96,7 @@ public class Customer {
 		this.email = email;
 		
 	}
-	
+
 	public String getAddress() {
 
 		return address;
@@ -113,7 +113,6 @@ public class Customer {
 		return zip;
 
 	}
-	
 	public void setZip(String zip) {
 
 		this.zip = zip;
@@ -125,9 +124,20 @@ public class Customer {
 		return state;
 
 	}
+	
 	public void setState(String state) {
 
 		this.state = state;
+	}
+	
+	public String getSSN() {
+		
+		return ssn;
+	}
+	
+	public void setSSN(String ssn) {
+		
+		this.ssn = ssn;
 	}
 	
 	 public ArrayList<Flight> getFlights() {
@@ -154,8 +164,5 @@ public class Customer {
 		 
 	 }
 		
-	
-	
-	 
 
 }

@@ -4,7 +4,7 @@ public class Action {
 	
 	public static final String LOGIN = "login";
 	public static final String GET_FLIGHTS = "getFlgihts";
-	
+	public static final String REGISTER = "register";
 	
 
 }

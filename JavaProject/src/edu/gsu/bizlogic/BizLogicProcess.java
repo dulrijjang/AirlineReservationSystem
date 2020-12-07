@@ -19,6 +19,11 @@ public class BizLogicProcess {
 				
 				DBQuery.getFlights(c1);
 				break;	
+				
+			case Action.REGISTER:
+				
+				DBQuery.register(c1);
+				break;
 		
 		}
 		
